@@ -1,0 +1,141 @@
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100,255,218,0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+}
+
+body {
+    background-color: var(--navy);
+    color: var(--slate);
+    font-family: var(--font-sans);
+}
+
+header {
+   background-color:  var(--navy); 
+   filter: 10px;
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%; 
+   padding: 40px 3%;
+   border: 1px dashed red;
+
+}
+
+header h1 {
+    font-size: 27px;
+    font-family: var(--font-mono);
+    color:  var(--green);
+    border: 2px solid var(--green);
+    padding: 3px 10px;
+    border-radius: 9px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+    font-family: var(--font-mono);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--slate);
+    padding: 0 0 5px 0;
+}
+
+nav ul li a:hover {
+    color: var(--green);
+    border-bottom: 3px solid var(--green);
+}
+
+main {
+    
+}
+
+.button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.button:hover {
+    border: 0;    
+    
+}
+
+#left {
+    background-color: white;
+    width: 5%;
+    display: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#right {
+    background-color: white;
+    width: 5%;
+    display: fixed;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+#center {
+    padding: 17% 20%;
+}
+
+.hero {
+    line-height: 1.3;
+}
+
+.hero h2 {
+    padding: 15px 0 0 0;
+    font-size: 65px;
+}
+
+.hero h3 {
+    padding: 0 0 35px 0;
+    font-size: 55px;
+}
+
+.hero p {
+    max-width: 540px;
+    
+}
+
+.green-text {
+    color: var(--green);
+}
+
+.light-slate {
+    color: var(--light-slate);
+}
+
+.lightest-slate {
+    color: var(--lightest-slate);
+}
+
+.font-fam-mono {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+}
