@@ -3,14 +3,14 @@
     --navy: #0a192f;
     --light-navy: #112240;
     --lightest-navy: #233554;
-    --navy-shadow: rgba(2,12,27,0.7);
+    --navy-trans: rgba(10, 25, 47,0.6);
     --dark-slate: #495670;
     --slate: #8892b0;
     --light-slate: #a8b2d1;
     --lightest-slate: #ccd6f6;
     --white: #e6f1ff;
     --green: #64ffda;
-    --green-tint: rgba(100,255,218,0.1);
+    --green-trans: rgba(100,255,218,0.1);
     --pink: #f57dff;
     --blue: #57cbff;
     --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
@@ -21,27 +21,30 @@ body {
     background-color: var(--navy);
     color: var(--slate);
     font-family: var(--font-sans);
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 4%;
+    /* border: 1px solid red; */
 }
 
 header {
    font-family: var(--font-mono); 
-   background-color:  var(--navy); 
+   background-color: var(--navy-trans);
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
    display: flex;
    justify-content: space-between;
+   align-items: center;
    position: fixed;
    top: 0;
    left: 0;
-   width: 100%; 
-   padding: 40px 3% 10px 3%;
-   /* border-bottom: 1px solid var(--slate); */
+   width: 100%;
+   height: 8%; 
+   padding: 0 3%;
 }
 
-#main-logo {
-    font-size: 30px;
-    color:  var(--green);
-    border: 2px solid var(--green);
-    padding: 3px 10px;
-    border-radius: 8px;
+header a {
+    text-decoration: none;
 }
 
 nav ul li {
@@ -50,9 +53,8 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
     color: var(--slate);
-    padding: 0 0 5px 0;
+    padding-bottom: 5px;
 }
 
 nav ul li a:hover {
@@ -60,114 +62,99 @@ nav ul li a:hover {
     border-bottom: 3px solid var(--green);
 }
 
-main {
-    max-width: 80%;
-    margin: 0 auto;
+nav ul li a:focus {
+    color: var(--green);
+}
+
+.button {
+    font-family: var(--font-mono); 
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 10px 14px;
+}
+
+.button:hover {
+    font-family: var(--font-mono);
+    color: var(--green);
+    background-color: var(--green-trans);
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 section {
     min-height: 100vh;
+    scroll-margin-top: 20vh;
 }
 
 section p {
     line-height: 1.7;
 }
 
-#hero {
+#main-logo {
+    font-size: 25px;
+    color:  var(--green);
+    border: 2px solid var(--green);
+    padding: 3px 11px;
+    border-radius: 8px;
+}
+
+#main-logo:hover {
+    background-color: var(--green-trans);
+}
+
+#welcome {
     display: flex;
     align-items: center;
-    
-    
 }
 
-#hero h2 {
+#welcome h2 {
     padding: 15px 0;
     font-size: 65px;
+    color: var(--lightest-slate);
 }
 
-#hero h3 {
-    padding: 0 0 35px 0;
+#welcome h3 {
+    padding-bottom: 35px;
     font-size: 55px;
+    color: var(--light-slate);
 }
 
-#hero p {
+#welcome p {
     max-width: 540px;
 }
 
-
-.two-col-box {
-    display: flex;
-    justify-content: space-between;
-    
-    
-}
-
-.two-col-box img {
-    align-self: top;
-    /* order: 1; */
-}
-
-.two-col-box-inner p {
-    max-width: 70%;
-    margin: 20px 0;
+p.welcome-msg {
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;  
 }
 
 .section-heading {
     font-size: 28px;
     color: var(--lightest-slate);
+    padding-bottom: 25px;
+}
+
+.two-col-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-col-box p {
     padding-bottom: 15px;
 }
 
-
-
-.button {
-    color: var(--green);
-    background-color: transparent;
-    border: 1px solid var(--green);
-    border-radius: 4px;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 10px 10px;
+.two-col-box-left {
+    max-width: 80%;
+    padding-right: 15px;
 }
 
-.button:hover {
-    border: 0;    
-    
+.two-col-box-right {
+    padding-left: 5px;
 }
 
-#left {
-    background-color: white;
-    width: 5%;
-    height: 400px;
-    float: left;
-    display: fixed;
-    
-}
-
-#right {
-    background-color: white;
-    width: 5%;
-    height: 1000px;
-    float: right;
-    display: fixed;
-    position: relative;
-    top: 0;
-    right: 0;
-}
-
-.green-text {
-    color: var(--green);
-}
-
-.light-slate {
-    color: var(--light-slate);
-}
-
-.lightest-slate {
-    color: var(--lightest-slate);
-}
-
-.font-fam-mono {
-    font-family: var(--font-mono);
-    font-size: 1.2rem;
-}
