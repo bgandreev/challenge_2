@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <a href="#hero">
+        <a href="#welcome">
             <div id="main-logo">
                 <h1>D</h1>
             </div>
@@ -24,13 +24,13 @@
                     <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#">Experience</a>
+                    <a href="#experience">Experience</a>
                 </li>
                 <li>
-                    <a href="#">Work</a>
+                    <a href="#work">Work</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
                 <li>
                     <a class="button" href="#">Resume</a>
@@ -59,18 +59,41 @@
                     <div><a class="button" href="#">Button1</a></div>
                 </div>
                 <div class="two-col-box-right">
-                    <img src="./img/profile_pic_40.png" alt="Profile Picture">
+                    <img src="./img/profile_pic_trans.png" alt="Profile Picture">
                 </div>   
             </div>
         </section>
-        <section>
-            Experience
+        <section id="experience">
+            <h2 class="section-heading">Where I've Worked</h2>
+            <ul>
+                <li>Employer</li>
+                <li>Employer</li>
+                <li>Employer</li>
+                <li>Employer</li>
+            </ul>
         </section>
-        <section>
-            Work
+        <section id="work">
+            <h2 class="section-heading">Some things I've Built</h2>
+            <div class="three-col-box">
+                <div class="card">Lorem ipsum dolor sit amet.</div>
+                <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, asperiores est? Nesciunt ab tempore accusamus?</div>
+                <div class="card">Box 3</div>
+                <div class="card">Box 4</div>
+                <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam beatae nesciunt, dolorum maiores numquam sit. Quaerat ratione cum doloribus ex, illum eius eum quisquam labore tempora ea error, temporibus aut.</div>
+                <div class="card">Box 6</div>
+            </div>
         </section>
-        <section>
-            Contact
+        <section id="contact">
+            <h2 class="section-heading">Get in Touch</h2>
+            <p>Although I am still in training, my inbox is always open. Whether you have a question or just want to say hi, I will try my best to get back to you!</p>
+            <form class="contact-form" action="#">
+                <input class="name" type="text" placeholder="Name"><br>
+                <input class="email" type="text" placeholder="Email"><br>
+                <textarea rows="10" placeholder="Message"></textarea>
+                <br><br><br>
+                <button class="button" type="submit" value="Submit">Send Message</button>
+            </form>
+              
         </section>
     </main>
 

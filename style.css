@@ -137,7 +137,7 @@ p.welcome-msg {
 .section-heading {
     font-size: 28px;
     color: var(--lightest-slate);
-    padding-bottom: 25px;
+    padding-bottom: 35px;
 }
 
 .two-col-box {
@@ -158,3 +158,89 @@ p.welcome-msg {
     padding-left: 5px;
 }
 
+#work, #contact {
+    scroll-margin-top: 14vh;
+}
+
+.three-col-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: stretch; */
+}
+
+.card {
+    flex: 0 1 30%;
+    /* margin: 15px 15px; */
+    background-color: var(--light-navy);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.contact-form {
+    padding-top: 40px;
+}
+
+.contact-form input{
+    color: var(--slate);
+    width: 400px;
+    border-bottom: 1px solid var(--dark-slate);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 5px 27px 9px 5px;
+    margin: 15px 0;
+}
+
+input.name {
+    background: transparent url(./img/user-icon.svg) right no-repeat;
+}
+
+input.email {
+    background: transparent url(./img/email-icon.svg) right no-repeat;
+}
+
+.contact-form input::placeholder {
+    color: var(--dark-slate);
+}
+
+input.name:focus {
+    outline: none;
+    background: transparent url(./img/user-icon-focus.svg) right no-repeat;
+}
+
+input.email:focus {
+    outline: none;
+    background: transparent url(./img/email-icon-focus.svg) right no-repeat;
+}
+
+form input:focus::placeholder {
+    color: transparent;
+}
+
+.contact-form textarea {
+    background-color: transparent;
+    color: var(--slate);
+    border: 1px solid var(--dark-slate);
+    padding: 7px 3px;
+    margin: 45px 0 25px 0;
+}
+
+form textarea:focus {
+    outline: none;
+}
+
+form textarea::placeholder {
+    color: var(--dark-slate);
+}
+
+form textarea:focus::placeholder {
+    color: transparent;
+}
+
+
+/* .card-main {
+    width: 50%;
+    background-color: var(--light-navy);
+    border-radius: 4px;
+} */
